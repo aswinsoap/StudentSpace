@@ -12,10 +12,6 @@ body {
   line-height: 1.5;
 }
 
-p {
-  margin: 0;
-  padding: 10px;
-}
 /* Layout styles */
 .StudentSpace {
   display: flex;
@@ -27,15 +23,15 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(212, 212, 212);
   height: 55px;
   padding: 0 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .left-section {
   font-weight: 800;
   font-size: 20px;
-  background-color: lightblue;
   width: 250px;
   margin-right: 50px;
   display: flex;
@@ -46,55 +42,141 @@ p {
 .middle-section {
   flex: 1;
   max-width: 400px;
-  background-color: lightpink;
   display: flex;
   align-items: center;
 }
 
 .right-section {
-  background-color: lightblue;
-  width: 400px;
+  display: flex;
+  align-items: end;
+  flex-direction: row;
+}
+
+.notification-icon,
+.settings-icon {
+  margin-left: 20px;
+}
+
+.rs-notification,
+.rs-settings {
+  width: 24px;
+  height: 24px;
 }
 
 .search-bar {
   flex: 1;
-  height: 30px;
+  height: 35px;
   padding-left: 10px;
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
-  border-color: rgb(212, 212, 212);
-  border-radius: 70px;
+  border-color: rgb(68, 68, 68);
+  border-radius: 50px;
   box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.05);
+  background-image: url("assets/search.png");
 }
 
 .search-bar::placeholder {
   font-family: "Roboto", Arial;
 }
 
-.search-button {
-  height: 32px;
-  width: 60px;
-  border-radius: 60px;
-  border-width: 0px;
-  margin-left: -30px;
+.search-icon {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  right: 35px;
 }
 
-.sidebar{
-  background-color: rgb(136, 161, 161);
+.sidebar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  bottom: 0;
   width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.sidebar-tabs{
-  padding: 3px;
+.sidebar-tabs {
+  height: 50px;
+  width: 150px;
+  border-radius: 45px;
+  transition: background-color 0.3s ease-in-out;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 50px;
+  margin: 10px;
 }
 
-.blue{
-  background-color: rgb(136, 161, 161);
+.sidebar-tabs a{
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
 }
 
-.green{
-  background-color: rgb(112, 158, 110);
+.sidebar-tabs:hover {
+  background-color: rgb(236, 236, 236);
+}
+
+
+.student-main {
+  display: flex;
+  flex-direction: column;
+  padding-left: 200px;
+  border-radius: 15px;
+}
+
+.student-progress {
+  background-color: #95b694;
+  margin: 15px;
+  display: flex;
+}
+.student-progress-graph {
+  margin: 20px;
+}
+
+.Attendance-percentage{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo{
+  background-color: #aebaff;
+  margin: 15px;
+}
+
+.course-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-list li {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.course-list li:hover {
+  background-color: #e7e7e7;
+}
+
+.course-list li:active {
+  background-color: #d7d7d7;
+}
+
+.course-list li:first-child {
+  margin-top: 10px;
+}
+
+.course-list li:last-child {
+  margin-bottom: 0;
 }
